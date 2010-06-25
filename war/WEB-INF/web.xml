@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<servlet>
+		<servlet-name>MaratterServlet</servlet-name>
+		<servlet-class>zenjiro.server.MaratterServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SignInServlet</servlet-name>
+		<servlet-class>zenjiro.server.SignInServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CallBackServlet</servlet-name>
+		<servlet-class>zenjiro.server.CallBackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MaratterServlet</servlet-name>
+		<url-pattern>/maratter/maratter</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SignInServlet</servlet-name>
+		<url-pattern>/signinservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CallBackServlet</servlet-name>
+		<url-pattern>/callbackservlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>Maratter.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>remoteLoggingServiceImpl</servlet-name>
+		<servlet-class>com.google.gwt.libideas.logging.server.RemoteLoggingServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>remoteLoggingServiceImpl</servlet-name>
+		<url-pattern>/maratter/logging</url-pattern>
+	</servlet-mapping>
+</web-app>
